@@ -1,0 +1,10 @@
+{
+  "en": {
+    "success": "Your action is performed successfully",
+    "detail": "Details",
+    "no_record": "No record Found",
+    "already_exists": "Already Exists",
+    "required_field": "Please enter all required fields"
+
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "swagger": "1.0",
+  "info": {
+    "title": "NodeJs Demo",
+    "description": "<b>RESPONSES</b>::\n 200-> OK\n   401->Not Authorized\n   201->No Record\n 400->Bad Request \n 500->Internal Server Error",
+    
+      "version": "1.0"
+  },
+  "produces": ["application/json"],
+  "paths": {
+   
+    "api/vehicle/list": {
+      "get": {
+        "x-swagger-router-controller": "api/vehicle/list",
+        "operationId": "index",
+        "tags": ["Get vehicle listing"],
+        "description": "Get vehicle listing",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+
+            "examples": {
+              "application/json": 
+              {
+                "code": 200,
+                "message": "Your action is performed successfully",
+                "body": {
+                    "data": [
+                        {
+                            "icon": "http://localhost:9066/vehicle/icons/1672402162207_Group536651(2).png",
+                            "id": "1",
+                            "name": "Motorsiklet",
+                            "baseFare": "20",
+                            "price": 8,
+                            "status": 1,
+                            "createdAt": 1669629132
+                        }
+                        
+                        
+                    ]
+                }
+            }
+            }
+          }
+        }
+      }
+    }
+    
+
+  }
+}
